@@ -6,12 +6,13 @@ from streamlit_chat import message
 from transformers import BlenderbotTokenizer
 from transformers import BlenderbotForConditionalGeneration
 
-
+# for web app icon and title:
 st.set_page_config(page_title='Movie.Matrix', page_icon='🍿')
+
 with open('style.css') as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
-
+# for hiding hamburger menu in streamlit app:
 hide_streamlit_style = """
             <style>
             #MainMenu {visibility: hidden;}
@@ -20,6 +21,9 @@ hide_streamlit_style = """
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
+
+# function for fetching movie posters from tmdb api key:
+# error handling if movie posters are not found:
 def fetch_poster(movie_id):
     try:
         response = requests.get(
@@ -33,18 +37,20 @@ def fetch_poster(movie_id):
         st.stop()
 
 
+# loading data frame:
 movies_dict = pickle.load(open('movie_dict.pkl', 'rb'))
 movies = pd.DataFrame(movies_dict)
-
 similarity = pickle.load(open('similarity.pkl', 'rb'))
 
-st.title('Movie.Matrix 🎬')
+st.title('Movie.Matrix 🎬')  # webapp title
 
+# select box for movie selection:
 selected_movie_name = st.selectbox(
     'Search the movie name here! ⬇️',
-    movies['title'].values)
+    movies['title'].values
+)
 
-
+# main function for recommendation:
 def recommend(movie):
     movie_index = movies[movies['title'] == movie].index[0]
     distances = similarity[movie_index]
@@ -58,11 +64,10 @@ def recommend(movie):
         recommended_movies_id.append(movie_id)
         recommended_movies.append(movies.iloc[i[0]].title)
         # fetch poster from API
-
         recommended_movies_posters.append(fetch_poster(movie_id))
     return recommended_movies, recommended_movies_posters, recommended_movies_id
 
-# for button
+# recommendation after selecting movie from the select box:
 if st.button('Recommend ✔️'):
     names, posters, m_id = recommend(selected_movie_name)
     with st.container():
@@ -109,22 +114,20 @@ if st.button('Recommend ✔️'):
             clicked = my_expander.write("[⭐ More **_info_** ⭐](https://www.themoviedb.org/movie/{})".format(m_id[7]))
             st.image(posters[7])
 
+# sidebar features of webapp:
 
-# side bar
+# sidebar title:
 with st.sidebar:
-    st.title('**WELCOME.**')
+    st.title('**WELCOME.** ')
 
-
+# chatbot implementation:
 with st.sidebar:
     @st.experimental_singleton
     def get_models():
-        # it may be necessary for other frameworks to cache the model
-        # seems pytorch keeps an internal state of the conversation
         model_name = "facebook/blenderbot-400M-distill"
         tokenizer = BlenderbotTokenizer.from_pretrained(model_name)
         model = BlenderbotForConditionalGeneration.from_pretrained(model_name)
         return tokenizer, model
-
 
     if "history" not in st.session_state:
         st.session_state.history = []
@@ -148,6 +151,18 @@ with st.sidebar:
 
     st.text_input("Talk to the bot...", key="input_text", on_change=generate_answer)
 
+
+# how to navigate website guide:
+with st.sidebar:
+    my_expander = st.expander('Walk through Movie.Matrix 🔎')
+    clicked = my_expander.write('_How to navigate_')
+    clicked = my_expander.image('ss1.png')
+    clicked = my_expander.image('ss2.png')
+    clicked = my_expander.image('ss3.png')
+    clicked = my_expander.image('ss4.png')
+    clicked = my_expander.image('ss5.png')
+
+# contact-us details in sidebar:
 with st.sidebar:
     st.header('_Contact Us_ 📞')
     my_expander = st.expander('Email')
@@ -156,3 +171,33 @@ with st.sidebar:
     clicked = my_expander.write("[_24swetaa_](https://github.com/24swetaa)")
     my_expander = st.expander('LinkedIn ')
     clicked = my_expander.write("[_sweta-singh_](https://www.linkedin.com/in/sweta-singh-932b34206/)")
+
+# feedback form in sidebar:
+with st.sidebar:
+    st.header("_Send us your feedback!_  📬")
+    ans = st.radio('Did you find this page useful?',('MAYBE','YES','NO'))
+    if ans == 'MAYBE':
+        st.write("")
+    elif ans == 'YES':
+        st.balloons()
+        st.write("Please leave your feedback below. 🤗")
+    elif ans == 'NO':
+        st.write("Please help us improve! 😇")
+    st.write('<style>div.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
+    contact_form = """
+    <form action="https://formsubmit.co/sweta.singh.cse20@itbhu.ac.in" method="POST">
+         <input type="hidden" name="_captcha" value="false">
+         <input type="text" name="name" placeholder="Your name" required>
+         <input type="email" name="email" placeholder="Your email" required>
+         <textarea name="message" placeholder="Your message here"></textarea>
+         <button type="submit">Send</button>
+    </form>
+    """
+    st.markdown(contact_form, unsafe_allow_html=True)
+    # Use Local CSS File
+    def local_css(file_name):
+        with open(file_name) as f:
+            st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+    local_css("style.css")
+
+
