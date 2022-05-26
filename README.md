@@ -84,6 +84,13 @@ The problem was divided into several steps:
   - For more information user can click the title and through a link, it will get directed to the TMDB website for movie details.
   - A chatbot for interacting with the user. It can answer the various question of the user related to movie recommendations
   - Contact information for communication purposes.
-  
+
+## Acknowledgement:
+- [Heroku](https://www.heroku.com/)
+- [TMDB website](https://www.themoviedb.org/)
+- [Kaggle](https://www.kaggle.com/)
+- [Streamlit discuss](https://discuss.streamlit.io/)
+- [Huggingface for chatbot](https://huggingface.co/)
+- [Algorithm](https://towardsdatascience.com/cosine-similarity-explained-using-python-machine-learning-pyshark-5c5d6b9c18fa) 
   
 
