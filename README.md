@@ -16,7 +16,8 @@ A movie suggestion from the server-based system has made discovering a good movi
 7. [Approach](#approach)
 8. [Features](#features)
 9. [Screenshots of webapp](#ss)
-10. [Acknowledgment](#ak)
+10. [Webapp deployment](#deploy)
+11. [Acknowledgment](#ak)
 
 
 <a name = "data"></a>
@@ -123,7 +124,24 @@ The problem was divided into several steps:
 <img width="533" alt="ss4" src="https://user-images.githubusercontent.com/75166814/170484415-cd9fad14-954b-42a7-a1fc-3513429fdc3f.png">
 <img width="533" alt="ss5" src="https://user-images.githubusercontent.com/75166814/170484434-8fd3888a-501f-43bb-b05a-5d94a4e2aa8c.png">
 
+<a name = "deploy"></a>
+## Webapp deployment:
+Link to Movie.matrix webapp: https://movie-matrix.herokuapp.com/
 
+_Steps to deploy in heroku server_ :
+- Create an account in [Heroku](https://www.heroku.com/).
+- Create a new app and give it a name.
+- Download and install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli).
+- Run the following the commands in the your IDE:
+```
+$ heroku login
+$ cd my-project/
+$ git init
+$ heroku git:remote -a movie.matrix
+$ git add .
+$ git commit -am "initial deployment"
+$ git push heroku master
+```
 
 <a name = "ak"></a>
 ## Acknowledgement:
