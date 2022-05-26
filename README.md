@@ -111,10 +111,21 @@ The problem was divided into several steps:
   
   <a name = "features"></a>
   ## Features:
-  - On selecting a movie 8 similar movies are recommended along with their posters.
-  - For more information user can click the title and through a link, it will get directed to the TMDB website for movie details.
-  - A chatbot for interacting with the user. It can answer the various question of the user related to movie recommendations
-  - Contact information for communication purposes.
+  - A ```selectbox``` for selecting movies. Around 5000 movies options available.
+  - ```Grid layout``` to show 8 similar movies recommended for a given movie.
+  - Option of ```enlarging a movie poster```.
+  - To know more about the recommended movie one can click ```More info``` option and it gets directed to tmdb
+    movie website for movie details.
+  - ```Error Page``` is shown if the recommendations for the selected movie is not fetched.
+  - A ```Sidebar navigation``` present which consist of chatbot, contact us and feedback form.
+  - ```Page icon``` and ```Page title``` to display the uniqueness of this webapp.
+  - ```Explore section``` in the webapp helps the user to navigate through the webapp.
+  - An interactive ```Chatbot``` which can answer queries of a user related to movie details, recommendations and 
+    other stuff. 
+  - A ```Contact Us``` section to get engaged with the users.
+  - Valuable suggestions are appreciated from the users and they can submit it through ```Feedback forms``` present inside
+    the webapp.
+  - The webapp is ```Optimized for mobile view```.
 
 <a name = "ss"></a>
 ## Screenshots of the webapp:
