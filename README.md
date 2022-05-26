@@ -6,6 +6,18 @@ A movie suggestion from the server-based system has made discovering a good movi
 
 **Movie Matrix** is a web application which recommends similar movies to a movie the user likes.
 
+# Table of content:
+1. [About dataset](#data)
+2. [Architecture](#arch)
+3. [Tech stack](#tech)
+4. [Install dependencies](#dep)
+5. [To get API Key](#api)
+6. [Approach](#approach)
+7. [Features](#features)
+8. [Acknowledgment](#ak)
+
+
+<a name = "data"></a>
 ## About dataset:
 * TMDB ~5000 movie dataset [TMDB 5000 movie dataset](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata).
 * The data contained following files:
@@ -13,6 +25,12 @@ A movie suggestion from the server-based system has made discovering a good movi
   tmdb_5000_credits.csv
   tmdb_5000_movies.csv
   ```
+ 
+<a name = "arch"></a>
+ ## Architecture:
+![architecture movie matrix](https://user-images.githubusercontent.com/75166814/169737665-497d8f77-7916-413d-9f8d-fd6f0bcabfab.png)
+
+<a name = "tech"></a>
 ## Tech Stack:
 ![Untitled design](https://user-images.githubusercontent.com/75166814/170471714-d559b78d-20a6-4d8c-92d8-42b822cb43c1.png)
 
@@ -29,6 +47,7 @@ A movie suggestion from the server-based system has made discovering a good movi
    - Streamlit 1.9.0
    - PyTorch-Transformers 1.11.0
 
+<a name = "dep"></a>
 ## Install dependencies:
   Install dependencies for webapp using PyCharm terminal in windows OS:
 ```
@@ -41,16 +60,15 @@ A movie suggestion from the server-based system has made discovering a good movi
   Pillow            -> pip install pillow
   Pickle            -> pip install pickle-mixin
 ```
+
+<a name = "api"></a>
 ## To get API Key:
 - Create an account in [TMDB Website](https://www.themoviedb.org/).
 - Click on the API link from the left-hand sidebar in your account settings. 
 - Fill in the details to apply for the API key.
 - You will see the API key in your API sidebar once your request is approved.
 
-## Architecture:
-![architecture movie matrix](https://user-images.githubusercontent.com/75166814/169737665-497d8f77-7916-413d-9f8d-fd6f0bcabfab.png)
-
-
+<a name = "approach"></a>
 ## Approach:
 The problem was divided into several steps:
   > Dataset Collection:
@@ -81,12 +99,14 @@ The problem was divided into several steps:
       
   ###### For implementing a chat-bot [Here](https://huggingface.co/docs/transformers/model_doc/blenderbot).
   
+  <a name = "features"></a>
   ## Features:
   - On selecting a movie 8 similar movies are recommended along with their posters.
   - For more information user can click the title and through a link, it will get directed to the TMDB website for movie details.
   - A chatbot for interacting with the user. It can answer the various question of the user related to movie recommendations
   - Contact information for communication purposes.
 
+<a name = "ak"></a>
 ## Acknowledgement:
 - [Heroku](https://www.heroku.com/)
 - [TMDB website](https://www.themoviedb.org/)
