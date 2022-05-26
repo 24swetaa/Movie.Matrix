@@ -14,6 +14,8 @@ A movie suggestion from the server-based system has made discovering a good movi
   tmdb_5000_movies.csv
   ```
 ## Tech Stack:
+![Untitled design](https://user-images.githubusercontent.com/75166814/170471714-d559b78d-20a6-4d8c-92d8-42b822cb43c1.png)
+
 > Recommender system: 
    - Anaconda 2022.05
    - Jupyter Notebook 6.4.8
