@@ -15,7 +15,8 @@ A movie suggestion from the server-based system has made discovering a good movi
 6. [To run the project](#run)
 7. [Approach](#approach)
 8. [Features](#features)
-9. [Acknowledgment](#ak)
+9. [Screenshots of webapp](#ss)
+10. [Acknowledgment](#ak)
 
 
 <a name = "data"></a>
@@ -113,6 +114,16 @@ The problem was divided into several steps:
   - For more information user can click the title and through a link, it will get directed to the TMDB website for movie details.
   - A chatbot for interacting with the user. It can answer the various question of the user related to movie recommendations
   - Contact information for communication purposes.
+
+<a name = "ss"></a>
+## Screenshots of the webapp:
+<img width="533" alt="ss1" src="https://user-images.githubusercontent.com/75166814/170484325-0061cb78-4da4-4965-9932-e1865c9efdb6.png">
+<img width="533" alt="ss2" src="https://user-images.githubusercontent.com/75166814/170484353-65285951-7598-48ac-8cd0-e721701352b3.png">
+<img width="532" alt="ss3" src="https://user-images.githubusercontent.com/75166814/170484385-ad9374ed-85c2-4d81-91b0-4d245f3111c8.png">
+<img width="533" alt="ss4" src="https://user-images.githubusercontent.com/75166814/170484415-cd9fad14-954b-42a7-a1fc-3513429fdc3f.png">
+<img width="533" alt="ss5" src="https://user-images.githubusercontent.com/75166814/170484434-8fd3888a-501f-43bb-b05a-5d94a4e2aa8c.png">
+
+
 
 <a name = "ak"></a>
 ## Acknowledgement:
