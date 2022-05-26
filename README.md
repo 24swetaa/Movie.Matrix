@@ -142,6 +142,16 @@ $ git add .
 $ git commit -am "initial deployment"
 $ git push heroku master
 ```
+> Note:
+
+ Unable to deploy chatbot feature in heroku app due to its slug size (larger than the maximum limit). 
+ 
+ For adding chatbot feature add the following lines in requirements.txt file before deploying in heroku server.
+ ```
+ streamlit_chat
+ torch
+ transformers
+ ```
 
 <a name = "ak"></a>
 ## Acknowledgement:
