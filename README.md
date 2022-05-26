@@ -12,9 +12,10 @@ A movie suggestion from the server-based system has made discovering a good movi
 3. [Tech stack](#tech)
 4. [Install dependencies](#dep)
 5. [To get API Key](#api)
-6. [Approach](#approach)
-7. [Features](#features)
-8. [Acknowledgment](#ak)
+6. [To run the project](#run)
+7. [Approach](#approach)
+8. [Features](#features)
+9. [Acknowledgment](#ak)
 
 
 <a name = "data"></a>
@@ -50,16 +51,12 @@ A movie suggestion from the server-based system has made discovering a good movi
 <a name = "dep"></a>
 ## Install dependencies:
   Install dependencies for webapp using PyCharm terminal in windows OS:
-```
-  Streamlit         -> pip install streamlit
-  Streamlit chat    -> pip install streamlit_chat
-  Pandas            -> pip install pandas
-  PyTorch           -> pip install torchvision
-  Bokeh             -> pip install bokeh
-  Transformers      -> pip install transformers
-  Pillow            -> pip install pillow
-  Pickle            -> pip install pickle-mixin
-```
+  - Copy require.txt file in movie-recommender-system folder.
+  - Open PyCharm terminal and run:
+  ``` 
+    pip install require.txt
+    pip install torch
+  ```
 
 <a name = "api"></a>
 ## To get API Key:
@@ -67,6 +64,17 @@ A movie suggestion from the server-based system has made discovering a good movi
 - Click on the API link from the left-hand sidebar in your account settings. 
 - Fill in the details to apply for the API key.
 - You will see the API key in your API sidebar once your request is approved.
+
+<a name = "run"></a>
+## To run the project:
+- Clone the repository into your local machine.
+- Install all the dependencies for web app. (Refer to the install dependencies section).
+- Unzip similarlity.pkl file present in recommendation-system folder and movie-recommender-system folder.
+- Get your API key. (Refer to the To get API key section).
+- Then replace api_key in line 30 of recommendation system/movie-recommender-system (open in PyCharm or any other IDE).
+- Run the following command :
+  ``` streamlit run app.py ```
+- Go to http://localhost:8501 on your browser.
 
 <a name = "approach"></a>
 ## Approach:
