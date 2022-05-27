@@ -18,6 +18,7 @@ A movie suggestion from the server-based system has made discovering a good movi
 9. [Screenshots of webapp](#ss)
 10. [Webapp deployment](#deploy)
 11. [Acknowledgment](#ak)
+12. [Connect with me](#me)
 
 
 <a name = "data"></a>
@@ -173,4 +174,9 @@ $ git push heroku master
 - [Huggingface for chatbot](https://huggingface.co/)
 - [Algorithm](https://towardsdatascience.com/cosine-similarity-explained-using-python-machine-learning-pyshark-5c5d6b9c18fa) 
   
+<a name = "me"></a>
+## Connect with me:
+_Drop by and say hello_
+
+[Linkedin](https://www.linkedin.com/in/sweta-singh-932b34206/)
 
