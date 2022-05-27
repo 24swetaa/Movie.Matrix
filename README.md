@@ -117,16 +117,17 @@ The problem was divided into several steps:
   - Option of ```enlarging a movie poster```.
   - To know more about the recommended movie one can click the ```More info``` option and it gets directed to the tmdb
     movie website for movie details.
-  - ```Error Page``` is shown if the recommendations for the selected movie are not fetched.
+  - ```Error handling``` is done if the recommendations for the selected movie are not fetched and it also reduces
+    vulnerability of the web app.
   - A ```Sidebar navigation``` present consists of a chatbot, contact us and feedback form.
   - ```Page icon``` and ```Page title``` to display the uniqueness of this web app.
   - ```Explore section``` in the web app helps the user to navigate through the web app.
-  - An interactive ```Chatbot``` which can answer queries of a user-related to movie details, recommendations and 
+  - An interactive ```Chatbot``` which can answer queries of a user related to movie details, recommendations and 
     other stuff. 
   - A ```Contact Us``` section to get engaged with the users.
   - Valuable suggestions are appreciated by the users and they can submit them through ```Feedback forms``` present inside
     the web app.
-  - The web app is ```Optimized for mobile view```.
+  - The web app is also ```Optimized for mobile view```.
 
 <a name = "ss"></a>
 ## Screenshots of the web app:
