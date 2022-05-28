@@ -6,20 +6,46 @@ A movie suggestion from the server-based system has made discovering a good movi
 
 **Movie Matrix** is a web application which recommends similar movies to a movie the user likes.
 
+Link for video demo: [Link](https://drive.google.com/file/d/1Q37ka-kDdragTMpluXol5sHNwK_Uojvv/view?usp=sharing)
+
+Link for the website: https://movie-matrix.herokuapp.com/
+
 # Table of content:
-1. [About the dataset](#data)
+1. [Features](#features)
 2. [Architecture](#arch)
-3. [Tech stack](#tech)
-4. [Install dependencies](#dep)
-5. [To get API Key](#api)
-6. [To run the project](#run)
-7. [Approach](#approach)
-8. [Features](#features)
+3. [About the dataset](#data)
+4. [Tech stack](#tech)
+5. [Install dependencies](#dep)
+6. [To get API Key](#api)
+7. [To run the project](#run)
+8. [Approach](#approach)
 9. [Screenshots of webapp](#ss)
 10. [Webapp deployment](#deploy)
 11. [Acknowledgment](#ak)
 12. [Connect with me](#me)
-
+ 
+  <a name = "features"></a>
+  ## Features:
+  - A ```selectbox``` for selecting movies. Around 5000 movie options are available.
+  - ```Grid layout``` to show 8 similar movies recommended for a given movie.
+  - Option of ```enlarging a movie poster```.
+  - To know more about the recommended movie one can click the ```More info``` option and it gets directed to the tmdb
+    movie website for movie details.
+  - ```Error handling``` is done if the recommendations for the selected movie are not fetched and it also reduces
+    vulnerability of the web app.
+  - A ```Sidebar navigation``` present consists of a chatbot, contact us and feedback form.
+  - ```Page icon``` and ```Page title``` to display the uniqueness of this web app.
+  - ```Explore section``` in the web app helps the user to navigate through the web app.
+  - An interactive ```Chatbot``` which can answer queries of a user related to movie details, recommendations and 
+    other stuff. 
+  - A ```Contact Us``` section to get engaged with the users.
+  - Valuable suggestions are appreciated by the users and they can submit them through ```Feedback forms``` present inside
+    the web app.
+  - The web app is also ```Optimized for mobile view```.
+ 
+<a name = "arch"></a>
+ ## Architecture:
+![architecture movie matrix](https://user-images.githubusercontent.com/75166814/169737665-497d8f77-7916-413d-9f8d-fd6f0bcabfab.png)
 
 <a name = "data"></a>
 ## About the dataset:
@@ -29,11 +55,7 @@ A movie suggestion from the server-based system has made discovering a good movi
   tmdb_5000_credits.csv
   tmdb_5000_movies.csv
   ```
- 
-<a name = "arch"></a>
- ## Architecture:
-![architecture movie matrix](https://user-images.githubusercontent.com/75166814/169737665-497d8f77-7916-413d-9f8d-fd6f0bcabfab.png)
-
+  
 <a name = "tech"></a>
 ## Tech Stack:
 ![Untitled design](https://user-images.githubusercontent.com/75166814/170471714-d559b78d-20a6-4d8c-92d8-42b822cb43c1.png)
@@ -109,26 +131,7 @@ The problem was divided into several steps:
       using PyTorch-Transformers.
       
   ###### For implementing a chat-bot [Here](https://huggingface.co/docs/transformers/model_doc/blenderbot).
-  
-  <a name = "features"></a>
-  ## Features:
-  - A ```selectbox``` for selecting movies. Around 5000 movie options are available.
-  - ```Grid layout``` to show 8 similar movies recommended for a given movie.
-  - Option of ```enlarging a movie poster```.
-  - To know more about the recommended movie one can click the ```More info``` option and it gets directed to the tmdb
-    movie website for movie details.
-  - ```Error handling``` is done if the recommendations for the selected movie are not fetched and it also reduces
-    vulnerability of the web app.
-  - A ```Sidebar navigation``` present consists of a chatbot, contact us and feedback form.
-  - ```Page icon``` and ```Page title``` to display the uniqueness of this web app.
-  - ```Explore section``` in the web app helps the user to navigate through the web app.
-  - An interactive ```Chatbot``` which can answer queries of a user related to movie details, recommendations and 
-    other stuff. 
-  - A ```Contact Us``` section to get engaged with the users.
-  - Valuable suggestions are appreciated by the users and they can submit them through ```Feedback forms``` present inside
-    the web app.
-  - The web app is also ```Optimized for mobile view```.
-
+ 
 <a name = "ss"></a>
 ## Screenshots of the web app:
 <img width="533" alt="ss1" src="https://user-images.githubusercontent.com/75166814/170484325-0061cb78-4da4-4965-9932-e1865c9efdb6.png">
